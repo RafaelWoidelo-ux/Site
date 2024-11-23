@@ -1,0 +1,230 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Verdão</title>
+
+    <!-- Link para uma fonte mais formal (Merriweather do Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        header {
+            font-family: 'Merriweather', serif;
+            font-size: 3em;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            text-shadow: 
+                1px 1px 2px #000, 
+                -1px -1px 2px #000;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            background-color: #006135; /* Cor de fundo alterada */
+            color: #fff;
+            padding-top: 120px;
+            align-items: center;
+        }
+
+        .main-video {
+            width: 90%;
+            max-width: 640px; /* Dimensão do único vídeo */
+            height: 360px;
+            object-fit: cover;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 3px solid #fff; /* Contorno branco */
+        }
+
+        .main-video:hover {
+            transform: scale(1.1);
+        }
+
+        .vs-cariocas {
+            font-size: 2em;
+            color: #fff;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .comments {
+            margin-top: 40px;
+            font-family: 'Merriweather', serif;
+            width: 90%;
+            max-width: 1000px;
+            background-color: #02542f; /* Cor de fundo da aba dos comentários */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .comment {
+            background-color: #01321c; /* Cor de fundo dos comentários */
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .comment span {
+            font-weight: bold;
+        }
+
+        .comments-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        /* Estilos para os vídeos na fileira */
+        .video-row {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 40px;
+            gap: 15px; /* Espaço entre os vídeos */
+        }
+
+        .video {
+            width: 23%; /* Define a largura dos vídeos */
+            border-radius: 15px; /* Bordas arredondadas */
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            border: 3px solid #fff; /* Contorno branco */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação de transformação e sombra */
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px; /* Bordas arredondadas também para o conteúdo do iframe */
+            object-fit: cover;
+        }
+
+        .video:hover {
+            transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+            box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.5); /* Aumento da sombra ao passar o mouse */
+        }
+
+        /* Estilo para o título "Brasileirão" */
+        .brasileirao {
+            font-size: 2em;
+            color: #fff;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Estilo para as estrelas acima do vídeo principal */
+        .stars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            color: #FFFFFF; /* Cor branca para as estrelas */
+            font-size: 8em; /* Tamanho muito maior para as estrelas */
+            margin: 0 10px; /* Espaçamento maior entre as estrelas */
+            transition: transform 0.3s ease; /* Animação para efeito de aumento */
+        }
+
+        .star:hover {
+            transform: scale(1.2); /* Aumenta o tamanho das estrelas ao passar o mouse */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        Meu Verdão
+    </header>
+
+    <!-- Estrelas acima do vídeo principal -->
+    <div class="stars">
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+    </div>
+
+    <!-- Exibe o vídeo principal no centro da página -->
+    <iframe class="main-video" src="https://www.youtube.com/embed/Z8YtuRj5p20" title="YouTube video player" allowfullscreen></iframe>
+
+    <!-- Texto "VS Cariocas" -->
+    <div class="vs-cariocas">
+        VS Cariocas
+    </div>
+
+    <!-- Fileira com 4 vídeos -->
+    <div class="video-row">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/urkuHAqwgFc?start=39" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/498B2KLaCS8" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/dN0yvQpAjM0" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/uiyQDQxvCqU?start=1" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Texto "Brasileirão" -->
+    <div class="brasileirao">
+        Brasileirão
+    </div>
+
+    <!-- Fileira com mais 4 vídeos -->
+    <div class="video-row">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/rsDf9E1RxYU" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/AHq0M4HYsQ8" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/E5Yn6JdFC9A" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/Z8YtuRj5p20" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Comentários -->
+    <div class="comments">
+        <p class="comments-title">Comentários:</p>
+        <div class="comment">
+            <span>Ana comentou:</span> Sem mundial
+        </div>
+        <div class="comment">
+            <span>Davi comentou:</span> Palmeiras não tem mundial
+        </div>
+        <div class="comment">
+            <span>Yan comentou:</span> Melhor time
+        </div>
+        <div class="comment">
+            <span>Rafael comentou:</span> Avanti Palestra
+        </div>
+        <div class="comment">
+            <span>Joan comentou:</span> Vai corinthians
+        </div>
+    </div>
+
+</body>
+</html>
